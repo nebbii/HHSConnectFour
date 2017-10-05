@@ -8,7 +8,7 @@ package hhsconnectfour;
 /**
  *
  * @author Ben
- * me me big boye
+ * me me big boye, me me large person. nice and gender neutral.
  */
 public class HHSConnectFour extends javax.swing.JFrame {
 
