@@ -128,89 +128,89 @@ public class HHSConnectFour extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("None");
+        jLabel1.setText(".");
 
-        jLabel2.setText("None");
+        jLabel2.setText(".");
 
-        jLabel3.setText("None");
+        jLabel3.setText(".");
 
-        jLabel4.setText("None");
+        jLabel4.setText(".");
 
-        jLabel5.setText("None");
+        jLabel5.setText(".");
 
-        jLabel6.setText("None");
+        jLabel6.setText(".");
 
-        jLabel7.setText("None");
+        jLabel7.setText(".");
 
-        jLabel8.setText("None");
+        jLabel8.setText(".");
 
-        jLabel9.setText("None");
+        jLabel9.setText(".");
 
-        jLabel10.setText("None");
+        jLabel10.setText(".");
 
-        jLabel11.setText("None");
+        jLabel11.setText(".");
 
-        jLabel12.setText("None");
+        jLabel12.setText(".");
 
-        jLabel13.setText("None");
+        jLabel13.setText(".");
 
-        jLabel14.setText("None");
+        jLabel14.setText(".");
 
-        jLabel15.setText("None");
+        jLabel15.setText(".");
 
-        jLabel16.setText("None");
+        jLabel16.setText(".");
 
-        jLabel17.setText("None");
+        jLabel17.setText(".");
 
-        jLabel18.setText("None");
+        jLabel18.setText(".");
 
-        jLabel19.setText("None");
+        jLabel19.setText(".");
 
-        jLabel20.setText("None");
+        jLabel20.setText(".");
 
-        jLabel21.setText("None");
+        jLabel21.setText(".");
 
-        jLabel22.setText("None");
+        jLabel22.setText(".");
 
-        jLabel23.setText("None");
+        jLabel23.setText(".");
 
-        jLabel24.setText("None");
+        jLabel24.setText(".");
 
-        jLabel25.setText("None");
+        jLabel25.setText(".");
 
-        jLabel26.setText("None");
+        jLabel26.setText(".");
 
-        jLabel27.setText("None");
+        jLabel27.setText(".");
 
-        jLabel28.setText("None");
+        jLabel28.setText(".");
 
-        jLabel29.setText("None");
+        jLabel29.setText(".");
 
-        jLabel30.setText("None");
+        jLabel30.setText(".");
 
-        jLabel31.setText("None");
+        jLabel31.setText(".");
 
-        jLabel32.setText("None");
+        jLabel32.setText(".");
 
-        jLabel33.setText("None");
+        jLabel33.setText(".");
 
-        jLabel34.setText("None");
+        jLabel34.setText(".");
 
-        jLabel35.setText("None");
+        jLabel35.setText(".");
 
-        jLabel36.setText("None");
+        jLabel36.setText(".");
 
-        jLabel37.setText("None");
+        jLabel37.setText(".");
 
-        jLabel38.setText("None");
+        jLabel38.setText(".");
 
-        jLabel39.setText("None");
+        jLabel39.setText(".");
 
-        jLabel40.setText("None");
+        jLabel40.setText(".");
 
-        jLabel41.setText("None");
+        jLabel41.setText(".");
 
-        jLabel42.setText("None");
+        jLabel42.setText(".");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
