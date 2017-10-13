@@ -5,6 +5,8 @@
  */
 package hhsconnectfour;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ben
@@ -456,6 +458,20 @@ public class HHSConnectFour extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         
+        // create array for keeping track of the playfield
+        char[][] playfield = new char[7][6];
+        
+        for(int i=0;i<(6*7);i++) {
+            int x=1;
+            int y=1;
+            if(x<8) {
+                x++;
+            } else {
+                x=1;
+                y++;
+            }
+            playfield[x][y] = 'x';
+        }
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
