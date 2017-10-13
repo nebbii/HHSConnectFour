@@ -5,8 +5,8 @@
  */
 package hhsconnectfour;
 
-import javax.swing.JOptionPane;
-import java.util.Arrays;
+import javax.swing.JOptionPane; // popups
+import java.util.Arrays; // array handling
 
 /**
  *
@@ -20,7 +20,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     public HHSConnectFour() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -430,7 +430,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     private void insert_x7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_insert_x7ActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
@@ -473,8 +473,6 @@ public class HHSConnectFour extends javax.swing.JFrame {
             }
             playfield[x][y] = 0;
         }
-        
-        JOptionPane.showMessageDialog(null,playfield[1][1],"Test Info 2",JOptionPane.INFORMATION_MESSAGE);
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
