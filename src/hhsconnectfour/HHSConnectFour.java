@@ -6,6 +6,7 @@
 package hhsconnectfour;
 
 import javax.swing.JOptionPane;
+import java.util.Arrays;
 
 /**
  *
@@ -459,7 +460,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         //</editor-fold>
         
         // create array for keeping track of the playfield
-        char[][] playfield = new char[7][6];
+        int[][] playfield = new int[7][6];
         
         for(int i=0;i<(6*7);i++) {
             int x=1;
@@ -470,8 +471,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 x=1;
                 y++;
             }
-            playfield[x][y] = 'x';
+            playfield[x][y] = 0;
         }
+        
+        JOptionPane.showMessageDialog(null,playfield[1][1],"Test Info 2",JOptionPane.INFORMATION_MESSAGE);
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
