@@ -5,14 +5,20 @@
  */
 package hhsconnectfour;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author Ben
  */
-public class CoinHandler {
+public class CoinHandler extends HHSConnectFour {
+    
+    public void testEdit(JLabel test) {
+        test.setText("test");
+    }
     
     public int addCoin(int row,int[][] playfield) {
-        
+            
         return 1;
     }
 }

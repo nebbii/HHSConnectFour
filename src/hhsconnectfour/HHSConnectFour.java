@@ -14,11 +14,68 @@ import java.util.Arrays; // array handling
  */
 public class HHSConnectFour extends javax.swing.JFrame {
 
+    int[][] playfield = new int[7][6];
+    String[][] labelfield = new String[7][6];
+    
+    
+        
     /**
      * Creates new form HHSConnectGUI
      */
     public HHSConnectFour() {
         initComponents();
+        
+        // make blank playfield
+        wipePlayfield(playfield);
+        
+        // store labels for playfield
+        labelfield[1][1] = "cell_x1y1";
+        labelfield[2][1] = "cell_x2y1";
+        labelfield[3][1] = "cell_x3y1";
+        labelfield[4][1] = "cell_x4y1";
+        labelfield[5][1] = "cell_x5y1";
+        labelfield[6][1] = "cell_x6y1";
+        labelfield[7][1] = "cell_x7y1";
+
+        labelfield[1][2] = "cell_x1y2";
+        labelfield[2][2] = "cell_x2y2";
+        labelfield[3][2] = "cell_x3y2";
+        labelfield[4][2] = "cell_x4y2";
+        labelfield[5][2] = "cell_x5y2";
+        labelfield[6][2] = "cell_x6y2";
+        labelfield[7][2] = "cell_x7y2";
+        
+        labelfield[1][3] = "cell_x1y3";
+        labelfield[2][3] = "cell_x2y3";
+        labelfield[3][3] = "cell_x3y3";
+        labelfield[4][3] = "cell_x4y3";
+        labelfield[5][3] = "cell_x5y3";
+        labelfield[6][3] = "cell_x6y3";
+        labelfield[7][3] = "cell_x7y3";
+        
+        labelfield[1][4] = "cell_x1y4";
+        labelfield[2][4] = "cell_x2y4";
+        labelfield[3][4] = "cell_x3y4";
+        labelfield[4][4] = "cell_x4y4";
+        labelfield[5][4] = "cell_x5y4";
+        labelfield[6][4] = "cell_x6y4";
+        labelfield[7][4] = "cell_x7y4";
+        
+        labelfield[1][5] = "cell_x1y5";
+        labelfield[2][5] = "cell_x2y5";
+        labelfield[3][5] = "cell_x3y5";
+        labelfield[4][5] = "cell_x4y5";
+        labelfield[5][5] = "cell_x5y5";
+        labelfield[6][5] = "cell_x6y5";
+        labelfield[7][5] = "cell_x7y5";
+        
+        labelfield[1][6] = "cell_x1y6";
+        labelfield[2][6] = "cell_x2y6";
+        labelfield[3][6] = "cell_x3y6";
+        labelfield[4][6] = "cell_x4y6";
+        labelfield[5][6] = "cell_x5y6";
+        labelfield[6][6] = "cell_x6y6";
+        labelfield[7][6] = "cell_x7y6";
     }
     
     /**
@@ -409,6 +466,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
     private void insert_x1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x1ActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Button clicked!");
+        renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x1ActionPerformed
 
     private void insert_x3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x3ActionPerformed
@@ -430,6 +489,36 @@ public class HHSConnectFour extends javax.swing.JFrame {
     private void insert_x7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_insert_x7ActionPerformed
+    
+    public int[][] wipePlayfield(int[][] playfield) {
+        for(int i=0;i<(6*7);i++) {
+            int x=1;
+            int y=1;
+            if(x<8) {
+                x++;
+            } else {
+                x=1;
+                y++;
+            }
+            playfield[x][y] = 0;
+        }
+        
+        return playfield;
+    }
+    
+    public void renderPlayfield(int[][] playfield) {
+        for(int i=0;i<(6*7);i++) {
+            int x=1;
+            int y=1;
+            if(x<8) {
+                x++;
+            } else {
+                x=1;
+                y++;
+            }
+            //cellx(.setText("test");
+        }
+    }
     
     /**
      * @param args the command line arguments
@@ -460,19 +549,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
         //</editor-fold>
         
         // create array for keeping track of the playfield
-        int[][] playfield = new int[7][6];
         
-        for(int i=0;i<(6*7);i++) {
-            int x=1;
-            int y=1;
-            if(x<8) {
-                x++;
-            } else {
-                x=1;
-                y++;
-            }
-            playfield[x][y] = 0;
-        }
+        
+        CoinHandler Test1 = new CoinHandler();
+        
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
