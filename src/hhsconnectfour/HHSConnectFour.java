@@ -513,7 +513,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
     private void insert_x1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x1ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Button clicked!");
+        //JOptionPane.showMessageDialog(null, "Button clicked!");
         playfield = Coinman.addCoin(1, playfield);
         renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x1ActionPerformed
@@ -585,7 +585,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
             // debug stuff
             String str_x = Integer.toString(x);
             String str_y = Integer.toString(y);
-            System.out.println("Currently at X:"+str_x+", Y:"+str_y);
+            //System.out.println("Currently at X:"+str_x+", Y:"+str_y);
             
             // render field
             String value;

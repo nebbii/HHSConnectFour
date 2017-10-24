@@ -37,27 +37,25 @@ public class CoinHandler {
         freeslot = -1;
         
         // for logging
-        String str_x = "-1"; 
-        String str_y = Integer.toString(col);
-        String strslot="-1";
+        String str_x = Integer.toString(col); 
+        String str_y = "-1";
         
         // check rows from the bottom to the top
-        for(int row=7;row<0;row--) 
+        for(int row=0;row<=6;row++) 
         {
-            if(playfield[row][col]<0) {  // if the slot is taken,
-                str_x = Integer.toString(row);
+            if(playfield[col][row]>0) {  // if the slot is taken,
+                str_y = Integer.toString(col);
                 System.out.println("Slot X"+str_x+"Y"+str_y+" was taken!");
             } else { // else return current freeslot
-                strslot = Integer.toString(row);
+                str_y = Integer.toString(row);
                 
                 freeslot = row;
-                break;
             }
         }
         if(freeslot != -1) {
-            System.out.println("The current freeslot is Slot #"+strslot+","
+            System.out.println("The current freeslot is Slot #"+str_y+","
                 + "coordinates X"+str_x+"Y"+str_y+"!");
-            playfield[freeslot][col] = 1;
+            playfield[col][freeslot] = 1;
         } else {
             System.out.println("Column #"+str_y+" is completely full!");
         }
