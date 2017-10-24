@@ -24,8 +24,43 @@ public class CoinHandler {
         test.setText("test");
     }*/
     
-    public int addCoin(int row,int[][] playfield) {
-            
-        return 1;
+    
+    /**
+     *
+     * looks for a free slot keeping gravity in mind,
+     * returns the play field with added coin if there's a free slot,
+     * otherwise prompts user
+     */
+    public int[][] addCoin(int col,int[][] playfield) {
+        // int for keeping track of which slot is free
+        int freeslot;
+        freeslot = -1;
+        
+        // for logging
+        String str_x = "-1"; 
+        String str_y = Integer.toString(col);
+        String strslot="-1";
+        
+        // check rows from the bottom to the top
+        for(int row=7;row<0;row--) 
+        {
+            if(playfield[row][col]<0) {  // if the slot is taken,
+                str_x = Integer.toString(row);
+                System.out.println("Slot X"+str_x+"Y"+str_y+" was taken!");
+            } else { // else return current freeslot
+                strslot = Integer.toString(row);
+                
+                freeslot = row;
+                break;
+            }
+        }
+        if(freeslot != -1) {
+            System.out.println("The current freeslot is Slot #"+strslot+","
+                + "coordinates X"+str_x+"Y"+str_y+"!");
+            playfield[freeslot][col] = 1;
+        } else {
+            System.out.println("Column #"+str_y+" is completely full!");
+        }
+        return playfield;
     }
 }

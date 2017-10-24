@@ -192,12 +192,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        insert_x2.setText("Insert");
-        insert_x2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                insert_x2ActionPerformed(evt);
-            }
-        });
+        
 
         insert_x1.setText("Insert");
         insert_x1.addActionListener(new java.awt.event.ActionListener() {
@@ -205,7 +200,14 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 insert_x1ActionPerformed(evt);
             }
         });
-
+        
+        insert_x2.setText("Insert");
+        insert_x2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insert_x2ActionPerformed(evt);
+            }
+        });
+        
         insert_x3.setText("Insert");
         insert_x3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -509,34 +511,47 @@ public class HHSConnectFour extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void insert_x2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_insert_x2ActionPerformed
-
     private void insert_x1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x1ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Button clicked!");
+        playfield = Coinman.addCoin(1, playfield);
         renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x1ActionPerformed
+    
+    private void insert_x2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x2ActionPerformed
+        // TODO add your handling code here:
+        Coinman.addCoin(2, playfield);
+        renderPlayfield(playfield);
+    }//GEN-LAST:event_insert_x2ActionPerformed
 
     private void insert_x3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x3ActionPerformed
         // TODO add your handling code here:
+        Coinman.addCoin(3, playfield);
+        renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x3ActionPerformed
 
     private void insert_x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x4ActionPerformed
         // TODO add your handling code here:
+        Coinman.addCoin(4, playfield);
+        renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x4ActionPerformed
 
     private void insert_x5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x5ActionPerformed
         // TODO add your handling code here:
+        Coinman.addCoin(5, playfield);
+        renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x5ActionPerformed
 
     private void insert_x6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x6ActionPerformed
         // TODO add your handling code here:
+        Coinman.addCoin(6, playfield);
+        renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x6ActionPerformed
 
     private void insert_x7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x7ActionPerformed
         // TODO add your handling code here:
+        Coinman.addCoin(7, playfield);
+        renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x7ActionPerformed
     
     public int[][] wipePlayfield(int[][] playfield) {
@@ -577,14 +592,14 @@ public class HHSConnectFour extends javax.swing.JFrame {
             
             switch(playfield[x][y]) {
                 case 1:
-                    value="red";
+                    value="(Red)";
                     break;
                 case 2:
-                    value="blue";
+                    value="(Blue)";
                     break;
                 case 0:    
                 default:
-                    value="none";
+                    value=".";
                     break;
             }
             
