@@ -113,7 +113,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="cell_x3y6" min="-2" pref="61" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel42" min="-2" pref="61" max="-2" attributes="0"/>
+                              <Component id="cell_x4y6" min="-2" pref="61" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="cell_x5y6" min="-2" pref="61" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -212,7 +212,7 @@
                   <Component id="cell_x3y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="cell_x1y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="cell_x2y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="jLabel42" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="cell_x5y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="cell_x6y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="cell_x7y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
@@ -484,7 +484,7 @@
         <Property name="text" type="java.lang.String" value="."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel42">
+    <Component class="javax.swing.JLabel" name="cell_x4y6">
       <Properties>
         <Property name="text" type="java.lang.String" value="."/>
       </Properties>

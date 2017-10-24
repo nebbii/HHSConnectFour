@@ -5,17 +5,24 @@
  */
 package hhsconnectfour;
 
+import java.util.ArrayList;
 import javax.swing.JLabel;
 
 /**
  *
  * @author Ben
  */
-public class CoinHandler extends HHSConnectFour {
+public class CoinHandler {
     
-    public void testEdit(JLabel test) {
-        test.setText("test");
+    ArrayList<JLabel> spaceList;
+
+    public CoinHandler() {
+        this.spaceList = new ArrayList<>();
     }
+    
+    /*public void testEdit(JLabel test) {
+        test.setText("test");
+    }*/
     
     public int addCoin(int row,int[][] playfield) {
             

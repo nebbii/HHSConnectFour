@@ -6,7 +6,8 @@
 package hhsconnectfour;
 
 import javax.swing.JOptionPane; // popups
-import java.util.Arrays; // array handling
+import java.util.ArrayList; // array handling
+import java.util.List;
 
 /**
  *
@@ -16,7 +17,9 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
     int[][] playfield = new int[7][6];
     String[][] labelfield = new String[8][7];
-        
+    
+    CoinHandler Coinman = new CoinHandler();
+    
     /**
      * Creates new form HHSConnectGUI
      */
@@ -133,7 +136,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         cell_x3y6 = new javax.swing.JLabel();
         cell_x1y6 = new javax.swing.JLabel();
         cell_x2y6 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
+        cell_x4y6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -268,7 +271,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
         cell_x2y6.setText(".");
 
-        jLabel42.setText(".");
+        cell_x4y6.setText(".");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -358,7 +361,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cell_x3y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cell_x4y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cell_x5y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -444,7 +447,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     .addComponent(cell_x3y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cell_x1y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cell_x2y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cell_x4y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cell_x5y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cell_x6y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cell_x7y6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -501,7 +504,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     }
     
     public void renderPlayfield(int[][] playfield) {
-        for(int i=0;i<(6*7);i++) {
+        for(int i=0;i<(7*6);i++) {
             int x=1;
             int y=1;
             if(x<8) {
@@ -510,7 +513,15 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 x=1;
                 y++;
             }
-            //cellx(.setText("test");
+            
+            Coinman.spaceList.add(0, cell_x1y1);
+            Coinman.spaceList.add(1, cell_x2y1);
+            Coinman.spaceList.add(2, cell_x3y1);
+            Coinman.spaceList.add(3, cell_x4y1);
+            Coinman.spaceList.add(4, cell_x5y1);
+            Coinman.spaceList.add(5, cell_x6y1);
+            
+            Coinman.spaceList.get(1).setText("Test");
         }
     }
     
@@ -580,6 +591,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     private javax.swing.JLabel cell_x4y3;
     private javax.swing.JLabel cell_x4y4;
     private javax.swing.JLabel cell_x4y5;
+    private javax.swing.JLabel cell_x4y6;
     private javax.swing.JLabel cell_x5y1;
     private javax.swing.JLabel cell_x5y2;
     private javax.swing.JLabel cell_x5y3;
@@ -605,6 +617,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     private javax.swing.JButton insert_x5;
     private javax.swing.JButton insert_x6;
     private javax.swing.JButton insert_x7;
-    private javax.swing.JLabel jLabel42;
     // End of variables declaration//GEN-END:variables
+
+    
 }
