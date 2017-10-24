@@ -26,6 +26,55 @@ public class HHSConnectFour extends javax.swing.JFrame {
     public HHSConnectFour() {
         initComponents();
         
+        // put every cell of playfield in list
+        Coinman.spaceList.add(cell_x1y1); // 0
+        Coinman.spaceList.add(cell_x2y1); // 1
+        Coinman.spaceList.add(cell_x3y1); // 2
+        Coinman.spaceList.add(cell_x4y1); // 3
+        Coinman.spaceList.add(cell_x5y1); // 4
+        Coinman.spaceList.add(cell_x6y1); // 5
+        Coinman.spaceList.add(cell_x7y1); // 6
+
+        Coinman.spaceList.add(cell_x1y2); // 7
+        Coinman.spaceList.add(cell_x2y2); // 8
+        Coinman.spaceList.add(cell_x3y2); // 9
+        Coinman.spaceList.add(cell_x4y2); // 10
+        Coinman.spaceList.add(cell_x5y2); // 11
+        Coinman.spaceList.add(cell_x6y2); // 12
+        Coinman.spaceList.add(cell_x7y2); // 13
+
+        Coinman.spaceList.add(cell_x1y3); // 14
+        Coinman.spaceList.add(cell_x2y3); // 15
+        Coinman.spaceList.add(cell_x3y3); // 16
+        Coinman.spaceList.add(cell_x4y3); // 17
+        Coinman.spaceList.add(cell_x5y3); // 18
+        Coinman.spaceList.add(cell_x6y3); // 19
+        Coinman.spaceList.add(cell_x7y3); // 20
+
+        Coinman.spaceList.add(cell_x1y4); // 21
+        Coinman.spaceList.add(cell_x2y4); // 22
+        Coinman.spaceList.add(cell_x3y4); // 23
+        Coinman.spaceList.add(cell_x4y4); // 24
+        Coinman.spaceList.add(cell_x5y4); // 25
+        Coinman.spaceList.add(cell_x6y4); // 26
+        Coinman.spaceList.add(cell_x7y4); // 27
+
+        Coinman.spaceList.add(cell_x1y5); // 28
+        Coinman.spaceList.add(cell_x2y5); // 29
+        Coinman.spaceList.add(cell_x3y5); // 30
+        Coinman.spaceList.add(cell_x4y5); // 31
+        Coinman.spaceList.add(cell_x5y5); // 32
+        Coinman.spaceList.add(cell_x6y5); // 33
+        Coinman.spaceList.add(cell_x7y5); // 34
+
+        Coinman.spaceList.add(cell_x1y6); // 35
+        Coinman.spaceList.add(cell_x2y6); // 36
+        Coinman.spaceList.add(cell_x3y6); // 37
+        Coinman.spaceList.add(cell_x4y6); // 38
+        Coinman.spaceList.add(cell_x5y6); // 39
+        Coinman.spaceList.add(cell_x6y6); // 40
+        Coinman.spaceList.add(cell_x7y6); // 41
+        
         // make blank playfield
         wipePlayfield(playfield);
         
@@ -513,13 +562,6 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 x=1;
                 y++;
             }
-            
-            Coinman.spaceList.add(0, cell_x1y1);
-            Coinman.spaceList.add(1, cell_x2y1);
-            Coinman.spaceList.add(2, cell_x3y1);
-            Coinman.spaceList.add(3, cell_x4y1);
-            Coinman.spaceList.add(4, cell_x5y1);
-            Coinman.spaceList.add(5, cell_x6y1);
             
             Coinman.spaceList.get(1).setText("Test");
         }
