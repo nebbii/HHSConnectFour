@@ -23,22 +23,124 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton6" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton7" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="66" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="insert_x1" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="insert_x2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="insert_x3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="insert_x4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="insert_x5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="insert_x6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="insert_x7" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cell_x1y5" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="cell_x2y5" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x3y5" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x4y5" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x5y5" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x6y5" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x7y5" min="-2" pref="61" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="cell_x1y4" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="cell_x2y4" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x3y4" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x4y4" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x5y4" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x6y4" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x7y4" min="-2" pref="61" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="cell_x1y3" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="cell_x2y3" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x3y3" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x4y3" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x5y3" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x6y3" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x7y3" min="-2" pref="61" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="cell_x1y2" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <Component id="cell_x2y2" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x3y2" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x4y2" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x5y2" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x6y2" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cell_x7y2" min="-2" pref="61" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="cell_x1y6" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="cell_x2y6" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x3y6" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x4y6" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x5y6" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x6y6" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x7y6" min="-2" pref="61" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="cell_x1y1" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="cell_x2y1" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x3y1" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x4y1" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x5y1" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x6y1" min="-2" pref="61" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cell_x7y1" min="-2" pref="61" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -47,75 +149,345 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jButton4" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jButton5" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jButton6" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="jButton7" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="insert_x2" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="insert_x1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="insert_x3" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="insert_x4" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="insert_x5" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="insert_x6" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="insert_x7" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="362" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cell_x3y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x1y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x2y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x5y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x6y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x7y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cell_x3y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x1y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x2y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x5y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x6y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x7y2" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cell_x3y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x1y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x2y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x5y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x6y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x7y3" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cell_x3y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x1y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x2y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x5y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x6y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x7y4" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cell_x3y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x1y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x2y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x5y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x6y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x7y5" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="cell_x3y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x1y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x2y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x4y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x5y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x6y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Component id="cell_x7y6" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="insert_x2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="insert_x1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="insert_x3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="insert_x4">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x4ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="insert_x5">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x5ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton6">
+    <Component class="javax.swing.JButton" name="insert_x6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x6ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton7">
+    <Component class="javax.swing.JButton" name="insert_x7">
       <Properties>
         <Property name="text" type="java.lang.String" value="Insert"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="insert_x7ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x3y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x1y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x2y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x4y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x5y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x6y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x7y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x6y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x7y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x3y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x1y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x2y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x4y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x5y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x6y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x7y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x3y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x1y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x2y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x4y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x5y3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x6y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x7y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x3y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x1y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x2y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x4y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x5y4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x5y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x6y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x7y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x3y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x1y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x2y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x4y5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x5y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x6y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x7y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x3y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x1y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x2y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cell_x4y6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
