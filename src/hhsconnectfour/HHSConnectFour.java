@@ -16,7 +16,7 @@ import java.util.List;
 public class HHSConnectFour extends javax.swing.JFrame {
 
     // for keeping track of cell statuses
-    int[][] playfield = new int[7][6];
+    int[][] playfield = new int[8][7];
     
     // for getting the right cell coordinates
     int[][] labelfield = new int[8][7];
@@ -79,7 +79,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         Coinman.spaceList.add(cell_x7y6); // 41
         
         // make blank playfield
-        wipePlayfield(playfield);
+        playfield = wipePlayfield(playfield);
         
         // store labels for playfield
         labelfield[1][1] = 0;
@@ -567,10 +567,15 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 y++;
             }
             
+            // debug stuff
             String str_x = Integer.toString(x);
             String str_y = Integer.toString(y);
-            //System.out.println("Currently at X:"+str_x+", Y:"+str_y);
-            Coinman.spaceList.get(labelfield[x][y]).setText("Test");
+            System.out.println("Currently at X:"+str_x+", Y:"+str_y);
+            
+            // render field
+            String value = Integer.toString(playfield[x][y]);
+            
+            Coinman.spaceList.get(labelfield[x][y]).setText("");
         }
     }
     
