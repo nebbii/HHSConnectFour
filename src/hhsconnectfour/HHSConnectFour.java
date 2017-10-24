@@ -573,9 +573,22 @@ public class HHSConnectFour extends javax.swing.JFrame {
             System.out.println("Currently at X:"+str_x+", Y:"+str_y);
             
             // render field
-            String value = Integer.toString(playfield[x][y]);
+            String value;
             
-            Coinman.spaceList.get(labelfield[x][y]).setText("");
+            switch(playfield[x][y]) {
+                case 1:
+                    value="red";
+                    break;
+                case 2:
+                    value="blue";
+                    break;
+                case 0:    
+                default:
+                    value="none";
+                    break;
+            }
+            
+            Coinman.spaceList.get(labelfield[x][y]).setText(value);
         }
     }
     
