@@ -15,8 +15,11 @@ import java.util.List;
  */
 public class HHSConnectFour extends javax.swing.JFrame {
 
+    // for keeping track of cell statuses
     int[][] playfield = new int[7][6];
-    String[][] labelfield = new String[8][7];
+    
+    // for getting the right cell coordinates
+    int[][] labelfield = new int[8][7];
     
     CoinHandler Coinman = new CoinHandler();
     
@@ -79,53 +82,53 @@ public class HHSConnectFour extends javax.swing.JFrame {
         wipePlayfield(playfield);
         
         // store labels for playfield
-        labelfield[1][1] = "cell_x1y1";
-        labelfield[2][1] = "cell_x2y1";
-        labelfield[3][1] = "cell_x3y1";
-        labelfield[4][1] = "cell_x4y1";
-        labelfield[5][1] = "cell_x5y1";
-        labelfield[6][1] = "cell_x6y1";
-        labelfield[7][1] = "cell_x7y1";
+        labelfield[1][1] = 0;
+        labelfield[2][1] = 1;
+        labelfield[3][1] = 2;
+        labelfield[4][1] = 3;
+        labelfield[5][1] = 4;
+        labelfield[6][1] = 5;
+        labelfield[7][1] = 6;
 
-        labelfield[1][2] = "cell_x1y2";
-        labelfield[2][2] = "cell_x2y2";
-        labelfield[3][2] = "cell_x3y2";
-        labelfield[4][2] = "cell_x4y2";
-        labelfield[5][2] = "cell_x5y2";
-        labelfield[6][2] = "cell_x6y2";
-        labelfield[7][2] = "cell_x7y2";
-        
-        labelfield[1][3] = "cell_x1y3";
-        labelfield[2][3] = "cell_x2y3";
-        labelfield[3][3] = "cell_x3y3";
-        labelfield[4][3] = "cell_x4y3";
-        labelfield[5][3] = "cell_x5y3";
-        labelfield[6][3] = "cell_x6y3";
-        labelfield[7][3] = "cell_x7y3";
-        
-        labelfield[1][4] = "cell_x1y4";
-        labelfield[2][4] = "cell_x2y4";
-        labelfield[3][4] = "cell_x3y4";
-        labelfield[4][4] = "cell_x4y4";
-        labelfield[5][4] = "cell_x5y4";
-        labelfield[6][4] = "cell_x6y4";
-        labelfield[7][4] = "cell_x7y4";
-        
-        labelfield[1][5] = "cell_x1y5";
-        labelfield[2][5] = "cell_x2y5";
-        labelfield[3][5] = "cell_x3y5";
-        labelfield[4][5] = "cell_x4y5";
-        labelfield[5][5] = "cell_x5y5";
-        labelfield[6][5] = "cell_x6y5";
-        labelfield[7][5] = "cell_x7y5";
-        
-        labelfield[1][6] = "cell_x1y6";
-        labelfield[2][6] = "cell_x2y6";
-        labelfield[3][6] = "cell_x3y6";
-        labelfield[4][6] = "cell_x4y6";
-        labelfield[5][6] = "cell_x5y6";
-        labelfield[6][6] = "cell_x6y6";
-        labelfield[7][6] = "cell_x7y6";
+        labelfield[1][2] = 7;
+        labelfield[2][2] = 8;
+        labelfield[3][2] = 9;
+        labelfield[4][2] = 10;
+        labelfield[5][2] = 11;
+        labelfield[6][2] = 12;
+        labelfield[7][2] = 13;
+
+        labelfield[1][3] = 14;
+        labelfield[2][3] = 15;
+        labelfield[3][3] = 16;
+        labelfield[4][3] = 17;
+        labelfield[5][3] = 18;
+        labelfield[6][3] = 19;
+        labelfield[7][3] = 20;
+
+        labelfield[1][4] = 21;
+        labelfield[2][4] = 22;
+        labelfield[3][4] = 23;
+        labelfield[4][4] = 24;
+        labelfield[5][4] = 25;
+        labelfield[6][4] = 26;
+        labelfield[7][4] = 27;
+
+        labelfield[1][5] = 28;
+        labelfield[2][5] = 29;
+        labelfield[3][5] = 30;
+        labelfield[4][5] = 31;
+        labelfield[5][5] = 32;
+        labelfield[6][5] = 33;
+        labelfield[7][5] = 34;
+
+        labelfield[1][6] = 35;
+        labelfield[2][6] = 36;
+        labelfield[3][6] = 37;
+        labelfield[4][6] = 38;
+        labelfield[5][6] = 39;
+        labelfield[6][6] = 40;
+        labelfield[7][6] = 41;
     }
     
     /**
@@ -553,17 +556,21 @@ public class HHSConnectFour extends javax.swing.JFrame {
     }
     
     public void renderPlayfield(int[][] playfield) {
+        int x=0;
+        int y=1;
+        
         for(int i=0;i<(7*6);i++) {
-            int x=1;
-            int y=1;
-            if(x<8) {
+            if((x<7)) {
                 x++;
             } else {
                 x=1;
                 y++;
             }
             
-            Coinman.spaceList.get(1).setText("Test");
+            String str_x = Integer.toString(x);
+            String str_y = Integer.toString(y);
+            //System.out.println("Currently at X:"+str_x+", Y:"+str_y);
+            Coinman.spaceList.get(labelfield[x][y]).setText("Test");
         }
     }
     
