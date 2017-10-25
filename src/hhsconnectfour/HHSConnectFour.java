@@ -658,8 +658,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
             // render field
             String value;
             //create imageicons
-             ImageIcon Redsqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\redsquare.png");
+            ImageIcon Redsqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\redsquare.png");
             ImageIcon Bluesqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\bluesquare.png");
+            ImageIcon Greysqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\bluesquare.jpg");
+            
             
             switch(playfield[x][y]) {
                 case 1:
@@ -670,7 +672,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
                 case 0:
                 default:
-                    value = "";
+                    Coinman.spaceList.get(labelfield[x][y]).setIcon(Greysqr);
                     break;
             }
         }
