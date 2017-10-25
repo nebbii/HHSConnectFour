@@ -41,7 +41,7 @@ public class CoinHandler {
         String str_y = "-1";
         
         // check rows from the bottom to the top
-        for(int row=0;row<=6;row++) 
+        for(int row=6;row>0;row--) 
         {
             if(playfield[col][row]>0) {  // if the slot is taken,
                 str_y = Integer.toString(col);

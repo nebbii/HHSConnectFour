@@ -571,6 +571,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     }
     
     public void renderPlayfield(int[][] playfield) {
+        // create array with length of playfield
         int x=0;
         int y=1;
         
@@ -599,7 +600,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
                 case 0:    
                 default:
-                    value=".";
+                    value="";
                     break;
             }
             
