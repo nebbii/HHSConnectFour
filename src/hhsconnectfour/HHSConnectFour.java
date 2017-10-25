@@ -8,6 +8,8 @@ package hhsconnectfour;
 import javax.swing.JOptionPane; // popups
 import java.util.ArrayList; // array handling
 import java.util.List;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -193,7 +195,12 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        
+        insert_x2.setText("Insert");
+        insert_x2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                insert_x2ActionPerformed(evt);
+            }
+        });
 
         insert_x1.setText("Insert");
         insert_x1.addActionListener(new java.awt.event.ActionListener() {
@@ -201,14 +208,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 insert_x1ActionPerformed(evt);
             }
         });
-        
-        insert_x2.setText("Insert");
-        insert_x2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                insert_x2ActionPerformed(evt);
-            }
-        });
-        
+
         insert_x3.setText("Insert");
         insert_x3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -591,13 +591,16 @@ public class HHSConnectFour extends javax.swing.JFrame {
             
             // render field
             String value;
+            //create imageicons
+             ImageIcon Redsqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\redsquare.png");
+            ImageIcon Bluesqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\bluesquare.png");
             
             switch(playfield[x][y]) {
                 case 1:
-                    value= (255,0,0);
+                    Coinman.spaceList.get(labelfield[x][y]).setIcon(Redsqr);
                     break;
                 case 2:
-                    value="(Blue)";
+                    Coinman.spaceList.get(labelfield[x][y]).setIcon(Bluesqr);
                     break;
                 case 0:    
                 default:
@@ -605,9 +608,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
             }
             
-        Coinman.spaceList.get(labelfield[x][y]).setText(value);
-          
-          
+           
         }
     }
     
