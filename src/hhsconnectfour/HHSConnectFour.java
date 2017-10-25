@@ -600,7 +600,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
                 case 0:    
                 default:
-                    value="";
+                    value="(None)";
                     break;
             }
             

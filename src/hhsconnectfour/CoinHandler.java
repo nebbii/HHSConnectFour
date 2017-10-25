@@ -15,15 +15,12 @@ import javax.swing.JLabel;
 public class CoinHandler {
     
     ArrayList<JLabel> spaceList;
-
+    int turn;
+    
     public CoinHandler() {
         this.spaceList = new ArrayList<>();
+        turn = 1;
     }
-    
-    /*public void testEdit(JLabel test) {
-        test.setText("test");
-    }*/
-    
     
     /**
      *
