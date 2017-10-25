@@ -79,7 +79,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         Coinman.spaceList.add(cell_x7y6); // 41
         
         // make blank playfield
-        playfield = wipePlayfield(playfield);
+        playfield = Coinman.wipePlayfield(playfield);
         
         // store labels for playfield
         labelfield[1][1] = 0;
@@ -553,58 +553,37 @@ public class HHSConnectFour extends javax.swing.JFrame {
         Coinman.addCoin(7, playfield);
         renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x7ActionPerformed
-    
-    public int[][] wipePlayfield(int[][] playfield) {
-        for(int i=0;i<(6*7);i++) {
-            int x=1;
-            int y=1;
-            if(x<8) {
-                x++;
-            } else {
-                x=1;
-                y++;
-            }
-            playfield[x][y] = 0;
-        }
         
-        return playfield;
-    }
-    
     public void renderPlayfield(int[][] playfield) {
         // create array with length of playfield
-        int x=0;
-        int y=1;
-        
-        for(int i=0;i<(7*6);i++) {
-            if((x<7)) {
+        int x = 0;
+        int y = 1;
+        for (int i = 0; i < (7 * 6); i++) {
+            if (x < 7) {
                 x++;
             } else {
-                x=1;
+                x = 1;
                 y++;
             }
-            
             // debug stuff
             String str_x = Integer.toString(x);
             String str_y = Integer.toString(y);
             //System.out.println("Currently at X:"+str_x+", Y:"+str_y);
-            
             // render field
             String value;
-            
-            switch(playfield[x][y]) {
+            switch (playfield[x][y]) {
                 case 1:
-                    value="(Red)";
+                    value = "(Red)";
                     break;
                 case 2:
-                    value="(Blue)";
+                    value = "(Blue)";
                     break;
-                case 0:    
+                case 0:
                 default:
-                    value="(None)";
+                    value = "(None)";
                     break;
             }
-            
-            Coinman.spaceList.get(labelfield[x][y]).setText(value);
+            this.Coinman.spaceList.get(this.labelfield[x][y]).setText(value);
         }
     }
     
@@ -701,6 +680,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
     private javax.swing.JButton insert_x6;
     private javax.swing.JButton insert_x7;
     // End of variables declaration//GEN-END:variables
+
+    
 
     
 }
