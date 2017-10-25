@@ -71,7 +71,10 @@ public class CoinHandler {
         }
         if(freeslot != -1) {
             System.out.println("Coin was put in Slot #"+str_y+".");
-            playfield[col][freeslot] = 1;
+            playfield[col][freeslot] = this.turn;
+            
+            // switch turns
+            if(turn==1){ turn=2; } else { turn=1; }
         } else {
             System.out.println("Column #"+str_x+" is full!");
         }
