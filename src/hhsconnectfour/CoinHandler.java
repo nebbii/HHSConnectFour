@@ -43,20 +43,24 @@ public class CoinHandler {
         // check rows from the bottom to the top
         for(int row=6;row>0;row--) 
         {
-            if(playfield[col][row]>0) {  // if the slot is taken,
+            if(playfield[col][row]>0) {  
+                // if the slot is taken,
                 str_y = Integer.toString(row);
                 System.out.println("Slot #"+str_y+" was taken.");
-            } else { // else return current freeslot
-                str_y = Integer.toString(row);
+            } else {
+                // free slot found, store y value
                 freeslot = row;
-                break;
+                str_y = Integer.toString(row);
+                
+                // exit loop once free slot is found
+                break; 
             }
         }
         if(freeslot != -1) {
             System.out.println("Coin was put in Slot #"+str_y+".");
             playfield[col][freeslot] = 1;
         } else {
-            System.out.println("Column #"+str_y+" is completely full!");
+            System.out.println("Column #"+str_x+" is full!");
         }
         return playfield;
     }
