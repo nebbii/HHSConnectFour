@@ -15,16 +15,13 @@ import javax.swing.JLabel;
 public class CoinHandler {
     
     ArrayList<JLabel> spaceList;
-
+    int turn;
+    
     public CoinHandler() {
         this.spaceList = new ArrayList<>();
+        turn = 1;
     }
-    
-    /*public void testEdit(JLabel test) {
-        test.setText("test");
-    }*/
-    
-    
+        
     /**
      *
      * looks for a free slot keeping gravity in mind,
@@ -43,22 +40,29 @@ public class CoinHandler {
         // check rows from the bottom to the top
         for(int row=6;row>0;row--) 
         {
-            if(playfield[col][row]>0) {  // if the slot is taken,
-                str_y = Integer.toString(col);
-                System.out.println("Slot X"+str_x+"Y"+str_y+" was taken!");
-            } else { // else return current freeslot
+            if(playfield[col][row]>0) {  
+                // if the slot is taken,
+                str_y = Integer.toString(row);
+                System.out.println("Slot #"+str_y+" was taken.");
+            } else {
+                // free slot found, store y value
+                freeslot = row;
                 str_y = Integer.toString(row);
                 
-                freeslot = row;
+                // exit loop once free slot is found
+                break; 
             }
         }
         if(freeslot != -1) {
-            System.out.println("The current freeslot is Slot #"+str_y+","
-                + "coordinates X"+str_x+"Y"+str_y+"!");
-            playfield[col][freeslot] = 1;
+            System.out.println("Coin was put in Slot #"+str_y+".");
+            playfield[col][freeslot] = this.turn;
+            
+            // switch turns
+            if(turn==1){ turn=2; } else { turn=1; }
         } else {
-            System.out.println("Column #"+str_y+" is completely full!");
+            System.out.println("Column #"+str_x+" is full!");
         }
         return playfield;
     }
+
 }
