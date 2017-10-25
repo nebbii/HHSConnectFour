@@ -64,5 +64,14 @@ public class CoinHandler {
         }
         return playfield;
     }
+    
+    /**
+     * Check if anyone has won yet
+     * 
+     * @param playfield 
+     */
+    public void CheckWinCondition(int[][] playfield) {
+        
+    }
 
 }
