@@ -79,7 +79,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         Coinman.spaceList.add(cell_x7y6); // 41
         
         // make blank playfield
-        playfield = Coinman.wipePlayfield(playfield);
+        playfield = wipePlayfield(playfield);
         
         // store labels for playfield
         labelfield[1][1] = 0;
@@ -190,7 +190,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         cell_x2y6 = new javax.swing.JLabel();
         cell_x4y6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        StartMatch = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -334,10 +334,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Lucida Bright", 0, 36)); // NOI18N
         jLabel1.setText("Vier op een rij!");
 
-        jButton1.setText("Start Match");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        StartMatch.setText("Start Match");
+        StartMatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                StartMatchActionPerformed(evt);
             }
         });
 
@@ -478,7 +478,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 .addGap(59, 59, 59))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(StartMatch)
                 .addGap(246, 246, 246))
         );
         layout.setVerticalGroup(
@@ -494,7 +494,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
-                .addComponent(jButton1)
+                .addComponent(StartMatch)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(insert_x2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -607,9 +607,11 @@ public class HHSConnectFour extends javax.swing.JFrame {
         renderPlayfield(playfield);
     }//GEN-LAST:event_insert_x7ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void StartMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartMatchActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        playfield = wipePlayfield(playfield);
+        renderPlayfield(playfield);
+    }//GEN-LAST:event_StartMatchActionPerformed
         
     public void renderPlayfield(int[][] playfield) {
         // create array with length of playfield
@@ -644,6 +646,20 @@ public class HHSConnectFour extends javax.swing.JFrame {
         }
     }
     
+    public int[][] wipePlayfield(int[][] playfield) {
+        int x = 0;
+        int y = 1;
+        for (int i = 0; i < (6 * 7); i++) {
+            if (x < 7) {
+                x++;
+            } else {
+                x = 1;
+                y++;
+            }
+            playfield[x][y] = 0;
+        }
+        return playfield;
+    }
     /**
      * @param args the command line arguments
      */
@@ -687,6 +703,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton StartMatch;
     private javax.swing.JLabel cell_x1y1;
     private javax.swing.JLabel cell_x1y2;
     private javax.swing.JLabel cell_x1y3;
@@ -736,13 +753,14 @@ public class HHSConnectFour extends javax.swing.JFrame {
     private javax.swing.JButton insert_x5;
     private javax.swing.JButton insert_x6;
     private javax.swing.JButton insert_x7;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
+
+    
 
     
 

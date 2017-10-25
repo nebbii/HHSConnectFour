@@ -21,23 +21,7 @@ public class CoinHandler {
         this.spaceList = new ArrayList<>();
         turn = 1;
     }
-    
-    public int[][] wipePlayfield(int[][] playfield) {
-        for(int i=0;i<(6*7);i++) {
-            int x=1;
-            int y=1;
-            if(x<8) {
-                x++;
-            } else {
-                x=1;
-                y++;
-            }
-            playfield[x][y] = 0;
-        }
         
-        return playfield;
-    }
-    
     /**
      *
      * looks for a free slot keeping gravity in mind,
