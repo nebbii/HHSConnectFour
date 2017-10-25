@@ -17,10 +17,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
     // for keeping track of cell statuses
     int[][] playfield = new int[8][7];
-    
     // for getting the right cell coordinates
     int[][] labelfield = new int[8][7];
-    
+   
+    // object for handling coin adding
     CoinHandler Coinman = new CoinHandler();
     
     /**
@@ -79,7 +79,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         Coinman.spaceList.add(cell_x7y6); // 41
         
         // make blank playfield
-        playfield = wipePlayfield(playfield);
+        wipePlayfield();
         
         // store labels for playfield
         labelfield[1][1] = 0;
@@ -609,7 +609,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
 
     private void StartMatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartMatchActionPerformed
         // TODO add your handling code here:
-        playfield = wipePlayfield(playfield);
+        wipePlayfield();
         renderPlayfield(playfield);
     }//GEN-LAST:event_StartMatchActionPerformed
         
@@ -646,7 +646,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         }
     }
     
-    public int[][] wipePlayfield(int[][] playfield) {
+    public void wipePlayfield() {
         int x = 0;
         int y = 1;
         for (int i = 0; i < (6 * 7); i++) {
@@ -656,9 +656,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 x = 1;
                 y++;
             }
-            playfield[x][y] = 0;
+            this.playfield[x][y] = 0;
         }
-        return playfield;
     }
     /**
      * @param args the command line arguments
