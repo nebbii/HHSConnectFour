@@ -8,10 +8,13 @@ package hhsconnectfour;
 import javax.swing.JOptionPane; // popups
 import java.util.ArrayList; // array handling
 import java.util.List;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author Ben
+ * me me big boye, me me large person. nice and gender neutral.
  */
 public class HHSConnectFour extends javax.swing.JFrame {
 
@@ -654,20 +657,22 @@ public class HHSConnectFour extends javax.swing.JFrame {
             //System.out.println("Currently at X:"+str_x+", Y:"+str_y);
             // render field
             String value;
-            switch (playfield[x][y]) {
+            //create imageicons
+             ImageIcon Redsqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\redsquare.png");
+            ImageIcon Bluesqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\bluesquare.png");
+            
+            switch(playfield[x][y]) {
                 case 1:
-                    value = "Red";
+                    Coinman.spaceList.get(labelfield[x][y]).setIcon(Redsqr);
                     break;
                 case 2:
-                    value = "Blue";
+                    Coinman.spaceList.get(labelfield[x][y]).setIcon(Bluesqr);
                     break;
                 case 0:
                 default:
                     value = "";
                     break;
             }
-            
-            this.Coinman.spaceList.get(this.labelfield[x][y]).setText(value);
         }
         String str_r_score = Integer.toString(r_score);
         String str_b_score = Integer.toString(b_score);
