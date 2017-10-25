@@ -43,7 +43,7 @@ public class CoinHandler {
             if(playfield[col][row]>0) {  
                 // if the slot is taken,
                 str_y = Integer.toString(row);
-                System.out.println("Slot #"+str_y+" was taken.");
+                System.out.print("Slot #"+str_y+" was taken; ");
             } else {
                 // free slot found, store y value
                 freeslot = row;
@@ -63,15 +63,6 @@ public class CoinHandler {
             System.out.println("Column #"+str_x+" is full!");
         }
         return playfield;
-    }
-    
-    /**
-     * Check if anyone has won yet
-     * 
-     * @param playfield 
-     */
-    public void CheckWinCondition(int[][] playfield, int coin_x, int coin_y) {
-        
     }
 
 }
