@@ -670,7 +670,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
                 case 0:
                 default:
-                    value = "";
+                    Coinman.spaceList.get(labelfield[x][y]).setIcon(null);
                     break;
             }
         }
