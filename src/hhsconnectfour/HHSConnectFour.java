@@ -666,6 +666,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     value = "";
                     break;
             }
+            
             this.Coinman.spaceList.get(this.labelfield[x][y]).setText(value);
         }
         String str_r_score = Integer.toString(r_score);

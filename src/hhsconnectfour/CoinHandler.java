@@ -70,7 +70,7 @@ public class CoinHandler {
      * 
      * @param playfield 
      */
-    public void CheckWinCondition(int[][] playfield) {
+    public void CheckWinCondition(int[][] playfield, int coin_x, int coin_y) {
         
     }
 
