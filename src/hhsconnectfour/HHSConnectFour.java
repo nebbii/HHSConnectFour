@@ -594,7 +594,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
             
             switch(playfield[x][y]) {
                 case 1:
-                    value="(Red)";
+                    value= (255,0,0);
                     break;
                 case 2:
                     value="(Blue)";
@@ -605,7 +605,9 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
             }
             
-            Coinman.spaceList.get(labelfield[x][y]).setText(value);
+        Coinman.spaceList.get(labelfield[x][y]).setText(value);
+          
+          
         }
     }
     
