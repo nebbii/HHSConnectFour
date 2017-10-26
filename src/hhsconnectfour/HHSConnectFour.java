@@ -306,8 +306,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(insert_x1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(insert_x1)
+                                .addGap(4, 4, 4)
                                 .addComponent(insert_x2)
                                 .addGap(2, 2, 2)
                                 .addComponent(insert_x3)
@@ -451,7 +451,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     .addComponent(insert_x3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(insert_x4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(insert_x5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(insert_x6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(insert_x6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(insert_x7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -608,15 +608,22 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     break;
             }
         }
+        // check if anyone won
         CheckWinConditions();
         
-        if(redwins) {
-            r_score++;
-            redwins=false;
-        } else if(bluewins) {
-            b_score++;
-            bluewins=false;
+        // if someone has won
+        if(redwins||bluewins) {
+            Coinman.turn = 1;
+            if(redwins) {
+                r_score++;
+                redwins=false;
+            } else if(bluewins) {
+                b_score++;
+                bluewins=false;
+            }
+            wipePlayfield();
         }
+        
         
         
         String str_r_score = Integer.toString(r_score);
@@ -776,37 +783,37 @@ public class HHSConnectFour extends javax.swing.JFrame {
             // x7 & x6 (3 possible 4-in-a-rows)
             for(int x=0;x<3;x++) {
                 // x7
-                if( playfield[7-x][6-x]==1&&
-                    playfield[6-x][5-x]==1&&
-                    playfield[5-x][4-x]==1&&
-                    playfield[4-x][3-x]==1) 
+                if( playfield[7-x][1+x]==1&&
+                    playfield[6-x][2+x]==1&&
+                    playfield[5-x][3+x]==1&&
+                    playfield[4-x][4+x]==1) 
                 {
                     this.redwins = true;
                     System.out.println("Red wins!");
                 }
 
-                if( playfield[7-x][6-x]==2&&
-                    playfield[6-x][5-x]==2&&
-                    playfield[5-x][4-x]==2&&
-                    playfield[4-x][3-x]==2) 
+                if( playfield[7-x][1+x]==2&&
+                    playfield[6-x][2+x]==2&&
+                    playfield[5-x][3+x]==2&&
+                    playfield[4-x][4+x]==2) 
                 {
                     this.bluewins = true;
                     System.out.println("Blue wins!");
                 }
 
                 // x6
-                if( playfield[6-x][6-x]==1&&
-                    playfield[5-x][5-x]==1&&
-                    playfield[4-x][4-x]==1&&
-                    playfield[3-x][3-x]==1) 
+                if( playfield[6-x][1+x]==1&&
+                    playfield[5-x][2+x]==1&&
+                    playfield[4-x][3+x]==1&&
+                    playfield[3-x][4+x]==1) 
                 {
                     this.redwins = true;
                     System.out.println("Red wins!");
                 }
-                if( playfield[6-x][6-x]==2&&
-                    playfield[5-x][5-x]==2&&
-                    playfield[4-x][4-x]==2&&
-                    playfield[3-x][3-x]==2) 
+                if( playfield[6-x][1+x]==2&&
+                    playfield[5-x][2+x]==2&&
+                    playfield[4-x][3+x]==2&&
+                    playfield[3-x][4+x]==2) 
                 {
                     this.bluewins = true;
                     System.out.println("Blue wins!");
@@ -889,6 +896,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
             }
             this.playfield[x][y] = 0;
         }
+        // reset turn
+        Coinman.turn = 1;
     }
     
     public void resetScore() {
