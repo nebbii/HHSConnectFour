@@ -30,7 +30,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
     boolean redwins = false;
     boolean bluewins = false;
     
-    int[] winningcom = new int[4];
+    int[] wincombination = new int[4];
     
     // scoreboard for red and blue
     int r_score = 0;
@@ -668,97 +668,200 @@ public class HHSConnectFour extends javax.swing.JFrame {
         }
         
         // diagonal topleft-bottomright
-        // x1 & x2 (3 possible 4-in-a-rows)
-        for(int x=0;x<3;x++) {
-            if( playfield[1+x][1+x]==1&&
-                playfield[2+x][2+x]==1&&
-                playfield[3+x][3+x]==1&&
-                playfield[4+x][4+x]==1) {
+            // x1 & x2 (3 possible 4-in-a-rows)
+            for(int x=0;x<3;x++) {
+                // x1
+                if( playfield[1+x][1+x]==1&&
+                    playfield[2+x][2+x]==1&&
+                    playfield[3+x][3+x]==1&&
+                    playfield[4+x][4+x]==1) 
+                {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+
+                if( playfield[1+x][1+x]==2&&
+                    playfield[2+x][2+x]==2&&
+                    playfield[3+x][3+x]==2&&
+                    playfield[4+x][4+x]==2) 
+                {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+
+                // x2
+                if( playfield[2+x][1+x]==1&&
+                    playfield[3+x][2+x]==1&&
+                    playfield[4+x][3+x]==1&&
+                    playfield[5+x][4+x]==1) 
+                {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+                
+                if( playfield[2+x][1+x]==2&&
+                    playfield[3+x][2+x]==2&&
+                    playfield[4+x][3+x]==2&&
+                    playfield[5+x][4+x]==2) 
+                {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+            }
+            // x3 & y2 (2 possible 4-in-a-rows)
+            for(int x=0;x<2;x++) {
+                // x3
+                if( playfield[3+x][1+x]==1&&
+                    playfield[4+x][2+x]==1&&
+                    playfield[5+x][3+x]==1&&
+                    playfield[6+x][4+x]==1) {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+                if( playfield[3+x][1+x]==2&&
+                    playfield[4+x][2+x]==2&&
+                    playfield[5+x][3+x]==2&&
+                    playfield[6+x][4+x]==2) {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+                // y2
+                if( playfield[1+x][2+x]==1&&
+                    playfield[2+x][3+x]==1&&
+                    playfield[3+x][4+x]==1&&
+                    playfield[4+x][5+x]==1) {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+                if( playfield[1+x][2+x]==2&&
+                    playfield[2+x][3+x]==2&&
+                    playfield[3+x][4+x]==2&&
+                    playfield[4+x][5+x]==2) {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+            }
+            // x4 & y3 (1 possible 4-in-a-row)
+            // x4
+            if(playfield[4][1]==1&&playfield[5][2]==1&&playfield[6][3]==1&&playfield[7][4]==1) {
                 this.redwins = true;
                 System.out.println("Red wins!");
+            }
+            if(playfield[4][1]==2&&playfield[5][2]==2&&playfield[6][3]==2&&playfield[7][4]==2) {
+                this.bluewins = true;
+                System.out.println("Blue wins!");
             }
 
-            if( playfield[1+x][1+x]==2&&
-                playfield[2+x][2+x]==2&&
-                playfield[3+x][3+x]==2&&
-                playfield[4+x][4+x]==2) {
-                this.bluewins = true;
-                System.out.println("Blue wins!");
-            }
-            
-            if( playfield[2+x][1+x]==1&&
-                playfield[3+x][2+x]==1&&
-                playfield[4+x][3+x]==1&&
-                playfield[5+x][4+x]==1) {
+            // y3
+            if(playfield[1][3]==1&&playfield[2][4]==1&&playfield[3][5]==1&&playfield[4][6]==1) {
                 this.redwins = true;
                 System.out.println("Red wins!");
             }
-            if( playfield[2+x][1+x]==2&&
-                playfield[3+x][2+x]==2&&
-                playfield[4+x][3+x]==2&&
-                playfield[5+x][4+x]==2) {
+            if(playfield[1][3]==2&&playfield[2][4]==2&&playfield[3][5]==2&&playfield[4][6]==2) {
                 this.bluewins = true;
                 System.out.println("Blue wins!");
             }
-        }
-        // (2 possible 4-in-a-rows)
-        // x3 & y2 
-        for(int x=0;x<2;x++) {
-            // x3
-            if( playfield[3+x][1+x]==1&&
-                playfield[4+x][2+x]==1&&
-                playfield[5+x][3+x]==1&&
-                playfield[6+x][4+x]==1) {
-                this.redwins = true;
-                System.out.println("Red wins!");
-            }
-            if( playfield[3+x][1+x]==2&&
-                playfield[4+x][2+x]==2&&
-                playfield[5+x][3+x]==2&&
-                playfield[6+x][4+x]==2) {
-                this.bluewins = true;
-                System.out.println("Blue wins!");
-            }
-            // y2
-            if( playfield[1+x][2+x]==1&&
-                playfield[2+x][3+x]==1&&
-                playfield[3+x][4+x]==1&&
-                playfield[4+x][5+x]==1) {
-                this.redwins = true;
-                System.out.println("Red wins!");
-            }
-            if( playfield[1+x][2+x]==2&&
-                playfield[2+x][3+x]==2&&
-                playfield[3+x][4+x]==2&&
-                playfield[4+x][5+x]==2) {
-                this.bluewins = true;
-                System.out.println("Blue wins!");
-            }
-        }
-        // x4 & y3
-        // x4
-        if(playfield[4][1]==1&&playfield[5][2]==1&&playfield[6][3]==1&&playfield[7][4]==1) {
-            this.redwins = true;
-            System.out.println("Red wins!");
-        }
-        if(playfield[4][1]==2&&playfield[5][2]==2&&playfield[6][3]==2&&playfield[7][4]==2) {
-            this.bluewins = true;
-            System.out.println("Blue wins!");
-        }
-        
-        // y3
-        if(playfield[1][3]==1&&playfield[2][4]==1&&playfield[3][5]==1&&playfield[4][6]==1) {
-            this.redwins = true;
-            System.out.println("Red wins!");
-        }
-        if(playfield[1][3]==2&&playfield[2][4]==2&&playfield[3][5]==2&&playfield[4][6]==2) {
-            this.bluewins = true;
-            System.out.println("Blue wins!");
-        }
         
         // diagonal topright-bottomleft
-        
-        
+            // x7 & x6 (3 possible 4-in-a-rows)
+            for(int x=0;x<3;x++) {
+                // x7
+                if( playfield[7-x][6-x]==1&&
+                    playfield[6-x][5-x]==1&&
+                    playfield[5-x][4-x]==1&&
+                    playfield[4-x][3-x]==1) 
+                {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+
+                if( playfield[7-x][6-x]==2&&
+                    playfield[6-x][5-x]==2&&
+                    playfield[5-x][4-x]==2&&
+                    playfield[4-x][3-x]==2) 
+                {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+
+                // x6
+                if( playfield[6-x][6-x]==1&&
+                    playfield[5-x][5-x]==1&&
+                    playfield[4-x][4-x]==1&&
+                    playfield[3-x][3-x]==1) 
+                {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+                if( playfield[6-x][6-x]==2&&
+                    playfield[5-x][5-x]==2&&
+                    playfield[4-x][4-x]==2&&
+                    playfield[3-x][3-x]==2) 
+                {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+            }
+            // x5 & y2 (2 possible 4-in-a-rows)
+            for(int x=0;x<2;x++) {
+                // x5
+                if( playfield[5-x][1+x]==1&&
+                    playfield[4-x][2+x]==1&&
+                    playfield[3-x][3+x]==1&&
+                    playfield[2-x][4+x]==1) 
+                {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+
+                if( playfield[5-x][1+x]==2&&
+                    playfield[4-x][2+x]==2&&
+                    playfield[3-x][3+x]==2&&
+                    playfield[2-x][4+x]==2) 
+                {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+
+                // y2
+                if( playfield[7-x][2+x]==1&&
+                    playfield[6-x][3+x]==1&&
+                    playfield[5-x][4+x]==1&&
+                    playfield[4-x][5+x]==1) 
+                {
+                    this.redwins = true;
+                    System.out.println("Red wins!");
+                }
+                if( playfield[7-x][2+x]==2&&
+                    playfield[6-x][3+x]==2&&
+                    playfield[5-x][4+x]==2&&
+                    playfield[4-x][5+x]==2) 
+                {
+                    this.bluewins = true;
+                    System.out.println("Blue wins!");
+                }
+            }
+            
+            // x4 & y3 (1 possible 4-in-a-row)
+            // x4
+            if(playfield[4][1]==1&&playfield[3][2]==1&&playfield[2][3]==1&&playfield[1][4]==1) {
+                this.redwins = true;
+                System.out.println("Red wins!");
+            }
+            if(playfield[4][1]==2&&playfield[3][2]==2&&playfield[2][3]==2&&playfield[1][4]==2) {
+                this.bluewins = true;
+                System.out.println("Blue wins!");
+            }
+
+            // y3
+            if(playfield[4][3]==1&&playfield[3][4]==1&&playfield[2][5]==1&&playfield[1][6]==1) {
+                this.redwins = true;
+                System.out.println("Red wins!");
+            }
+            if(playfield[4][3]==2&&playfield[3][4]==2&&playfield[2][5]==2&&playfield[1][6]==2) {
+                this.bluewins = true;
+                System.out.println("Blue wins!");
+            }
     }
     
     /**
