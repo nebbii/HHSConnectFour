@@ -212,14 +212,16 @@
                   <Component id="insert_x7" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cell_x3y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="cell_x1y1" alignment="0" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="cell_x2y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="cell_x4y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="cell_x5y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="cell_x6y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="cell_x7y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cell_x3y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="cell_x2y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="cell_x4y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="cell_x5y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="cell_x6y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="cell_x7y1" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">

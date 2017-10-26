@@ -30,6 +30,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
     boolean redwins = false;
     boolean bluewins = false;
     
+    int[] winningcom = new int[4];
+    
     // scoreboard for red and blue
     int r_score = 0;
     int b_score = 0;
@@ -452,14 +454,15 @@ public class HHSConnectFour extends javax.swing.JFrame {
                     .addComponent(insert_x6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(insert_x7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cell_x3y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cell_x1y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cell_x2y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cell_x4y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cell_x5y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cell_x6y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cell_x7y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cell_x3y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cell_x2y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cell_x4y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cell_x5y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cell_x6y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cell_x7y1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cell_x3y2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -665,7 +668,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
         }
         
         // diagonal topleft-bottomright
-        // x1
+        // x1 & x2 (3 possible 4-in-a-rows)
         for(int x=0;x<3;x++) {
             if( playfield[1+x][1+x]==1&&
                 playfield[2+x][2+x]==1&&
@@ -682,10 +685,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 this.bluewins = true;
                 System.out.println("Blue wins!");
             }
-        }
-        
-        // x2
-        for(int x=0;x<3;x++) {
+            
             if( playfield[2+x][1+x]==1&&
                 playfield[3+x][2+x]==1&&
                 playfield[4+x][3+x]==1&&
@@ -701,9 +701,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 System.out.println("Blue wins!");
             }
         }
-        
-        // x3
+        // (2 possible 4-in-a-rows)
+        // x3 & y2 
         for(int x=0;x<2;x++) {
+            // x3
             if( playfield[3+x][1+x]==1&&
                 playfield[4+x][2+x]==1&&
                 playfield[5+x][3+x]==1&&
@@ -718,6 +719,41 @@ public class HHSConnectFour extends javax.swing.JFrame {
                 this.bluewins = true;
                 System.out.println("Blue wins!");
             }
+            // y2
+            if( playfield[1+x][2+x]==1&&
+                playfield[2+x][3+x]==1&&
+                playfield[3+x][4+x]==1&&
+                playfield[4+x][5+x]==1) {
+                this.redwins = true;
+                System.out.println("Red wins!");
+            }
+            if( playfield[1+x][2+x]==2&&
+                playfield[2+x][3+x]==2&&
+                playfield[3+x][4+x]==2&&
+                playfield[4+x][5+x]==2) {
+                this.bluewins = true;
+                System.out.println("Blue wins!");
+            }
+        }
+        // x4 & y3
+        // x4
+        if(playfield[4][1]==1&&playfield[5][2]==1&&playfield[6][3]==1&&playfield[7][4]==1) {
+            this.redwins = true;
+            System.out.println("Red wins!");
+        }
+        if(playfield[4][1]==2&&playfield[5][2]==2&&playfield[6][3]==2&&playfield[7][4]==2) {
+            this.bluewins = true;
+            System.out.println("Blue wins!");
+        }
+        
+        // y3
+        if(playfield[1][3]==1&&playfield[2][4]==1&&playfield[3][5]==1&&playfield[4][6]==1) {
+            this.redwins = true;
+            System.out.println("Red wins!");
+        }
+        if(playfield[1][3]==2&&playfield[2][4]==2&&playfield[3][5]==2&&playfield[4][6]==2) {
+            this.bluewins = true;
+            System.out.println("Blue wins!");
         }
         
         // diagonal topright-bottomleft
