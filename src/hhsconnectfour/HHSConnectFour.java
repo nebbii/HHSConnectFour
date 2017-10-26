@@ -523,37 +523,37 @@ public class HHSConnectFour extends javax.swing.JFrame {
     
     private void insert_x2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x2ActionPerformed
         // TODO add your handling code here:
-        Coinman.addCoin(2, playfield);
+        playfield = Coinman.addCoin(2, playfield);
         renderPlayfield();
     }//GEN-LAST:event_insert_x2ActionPerformed
 
     private void insert_x3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x3ActionPerformed
         // TODO add your handling code here:
-        Coinman.addCoin(3, playfield);
+        playfield = Coinman.addCoin(3, playfield);
         renderPlayfield();
     }//GEN-LAST:event_insert_x3ActionPerformed
 
     private void insert_x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x4ActionPerformed
         // TODO add your handling code here:
-        Coinman.addCoin(4, playfield);
+        playfield = Coinman.addCoin(4, playfield);
         renderPlayfield();
     }//GEN-LAST:event_insert_x4ActionPerformed
 
     private void insert_x5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x5ActionPerformed
         // TODO add your handling code here:
-        Coinman.addCoin(5, playfield);
+        playfield = Coinman.addCoin(5, playfield);
         renderPlayfield();
     }//GEN-LAST:event_insert_x5ActionPerformed
 
     private void insert_x6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x6ActionPerformed
         // TODO add your handling code here:
-        Coinman.addCoin(6, playfield);
+        playfield = Coinman.addCoin(6, playfield);
         renderPlayfield();
     }//GEN-LAST:event_insert_x6ActionPerformed
 
     private void insert_x7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insert_x7ActionPerformed
         // TODO add your handling code here:
-        Coinman.addCoin(7, playfield);
+        playfield = Coinman.addCoin(7, playfield);
         renderPlayfield();
     }//GEN-LAST:event_insert_x7ActionPerformed
 
@@ -610,6 +610,15 @@ public class HHSConnectFour extends javax.swing.JFrame {
         }
         CheckWinConditions();
         
+        if(redwins) {
+            r_score++;
+            redwins=false;
+        } else if(bluewins) {
+            b_score++;
+            bluewins=false;
+        }
+        
+        
         String str_r_score = Integer.toString(r_score);
         String str_b_score = Integer.toString(b_score);
         
@@ -620,7 +629,8 @@ public class HHSConnectFour extends javax.swing.JFrame {
     /**
      * Check if anyone has won yet
      * 
-     * @param playfield 
+     * Returns the winning combination in objects, these can be called via
+     *  the spacelist
      */
     public void CheckWinConditions() {
         
@@ -884,7 +894,10 @@ public class HHSConnectFour extends javax.swing.JFrame {
     public void resetScore() {
         this.r_score = 0;
         this.b_score = 0;
+        
+        renderPlayfield();
     }
+    
     /**
      * @param args the command line arguments
      */
