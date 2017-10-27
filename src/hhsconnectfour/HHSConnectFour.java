@@ -675,7 +675,7 @@ public class HHSConnectFour extends javax.swing.JFrame {
             //create imageicons
             ImageIcon Redsqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\redsquare.png");
             ImageIcon Bluesqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\bluesquare.png");
-            ImageIcon Greysqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\bluesquare.jpg");
+            ImageIcon Greysqr = new ImageIcon(".\\src\\hhsconnectfour\\Images\\greysquare.jpg");
             
             
             switch(playfield[x][y]) {
