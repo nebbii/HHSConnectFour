@@ -700,9 +700,11 @@ public class HHSConnectFour extends javax.swing.JFrame {
             if(redwins) {
                 r_score++;
                 redwins=false;
+                JOptionPane.showMessageDialog(null, "Rood wint!");
             } else if(bluewins) {
                 b_score++;
                 bluewins=false;
+                JOptionPane.showMessageDialog(null, "Blauw wint!");
             }
             wipePlayfield();
         }
